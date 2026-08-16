@@ -2,6 +2,7 @@ import {
   Activity,
   BrainCircuit,
   Box,
+  Cog,
   ChevronRight,
   CircleCheck,
   Database,
@@ -205,15 +206,11 @@ export function Tools() {
 const SERVICES = [
   { name: "API", Icon: Server },
   { name: "Frontend", Icon: Activity },
-  { name: "Worker", Icon: Cogish },
+  { name: "Worker", Icon: Cog },
   { name: "PostgreSQL", Icon: Database },
   { name: "Redis", Icon: Layers },
   { name: "Agents Kali", Icon: Terminal },
 ];
-
-function Cogish(props: { className?: string }) {
-  return <Activity {...props} />;
-}
 
 export function SystemState() {
   const pct = 99.9;
