@@ -74,10 +74,11 @@ const CONTINENTS: [number, number][][] = [
 function inside(x: number, y: number, poly: [number, number][]) {
   let hit = false;
   for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
-    const [xi, yi] = poly[i];
-    const [xj, yj] = poly[j];
+    const [xi, yi] = poly[i] as [number, number];
+    const [xj, yj] = poly[j] as [number, number];
     if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) hit = !hit;
   }
+
   return hit;
 }
 
